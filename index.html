@@ -4,67 +4,154 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sasi Kumar M | Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="hero-container">
+<nav>
+<div class="nav-container">
+<div class="logo">Sasi</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#automation">Automation</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button id="themeToggle">🌙</button>
+</div>
+</nav>
 
-    <div class="hero-text">
-      <span class="badge">HELLO</span>
-      <h1>I am Sasi Kumar M</h1>
-      <h2>A Retail IT & Automation Professional</h2>
+<header id="home" class="hero reveal">
+<div class="hero-container">
 
-      <p>
-        Python • SQL • Power BI • Workflow Automation • MIS
-      </p>
+<div class="hero-text">
+<span class="badge">HELLO</span>
+<h1>I am Sasi Kumar M</h1>
+<h2>Retail IT & Automation Professional</h2>
+<p>Python • SQL • Power BI • Workflow Automation • MIS</p>
 
-      <div class="hero-buttons">
-        <a href="#about" class="btn">About Me</a>
-        <a href="resume.pdf" class="btn outline" download>Download CV</a>
-      </div>
-    </div>
+<div class="hero-buttons">
+<a href="#contact" class="btn">Contact</a>
+<a href="resume.pdf" class="btn outline" download>Download CV</a>
+</div>
+</div>
 
-    <div class="hero-image">
-      <img src="./assets/profile.jpg" alt="Sasi Kumar">
-    </div>
+<div class="hero-image">
+<img src="./assets/profile.jpg">
+</div>
 
-  </div>
+</div>
 </header>
 
-<section id="about" class="about">
-  <div class="about-container">
-
-    <div class="about-image">
-      <img src="./assets/profile.jpg">
-    </div>
-
-    <div class="about-text">
-      <h3>My Story</h3>
-
-      <p>
-        I am a Retail IT & MIS professional with over 10 years of experience driving automation,
-        analytics, and operational excellence across retail and supply chain environments.
-      </p>
-
-      <p>
-        I specialize in Python automation, SQL reporting, and Power BI dashboards. I have improved
-        order accuracy by 20%, reduced inventory holding costs by 25%, and delivered KPI dashboards
-        reducing operational expenses by 10%.
-      </p>
-
-      <ul>
-        <li>Python Automation</li>
-        <li>SQL / MIS Reporting</li>
-        <li>Power BI Dashboards</li>
-        <li>Workflow Optimization</li>
-      </ul>
-    </div>
-
-  </div>
+<section id="about" class="section reveal">
+<div class="container">
+<h3>About Me</h3>
+<p>
+Retail IT & MIS professional with 10+ years of experience in automation, analytics, and operational excellence.
+Specialized in Python automation, SQL reporting, and Power BI dashboards delivering measurable business impact.
+</p>
+</div>
 </section>
 
+<section id="skills" class="section gray reveal">
+<div class="container">
+<h3>Skills</h3>
+
+<div class="skill"><span>Workflow Automation</span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill"><span>Python</span><div class="bar"><div style="width:85%"></div></div></div>
+<div class="skill"><span>SQL / MIS</span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill"><span>Power BI</span><div class="bar"><div style="width:80%"></div></div></div>
+<div class="skill"><span>Visual Studio</span><div class="bar"><div style="width:75%"></div></div></div>
+<div class="skill"><span>Generative AI</span><div class="bar"><div style="width:70%"></div></div></div>
+
+</div>
+</section>
+
+<section id="experience" class="section reveal">
+<div class="container">
+<h3>Experience</h3>
+
+<div class="timeline-item">
+<h4>Soch Apparels Pvt Ltd</h4>
+<p>Senior Executive – IT / MIS</p>
+<ul>
+<li>Python automation reduced manual MIS reporting.</li>
+<li>Power BI dashboards saved 10% operational costs.</li>
+<li>Improved order accuracy by 20%.</li>
+<li>Reduced inventory holding cost by 25%.</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h4>MD Retail India Pvt Ltd</h4>
+<p>Executive – Supply Chain</p>
+<ul>
+<li>MIS reporting & logistics coordination.</li>
+<li>Inventory optimization support.</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="automation" class="section gray reveal">
+<div class="container">
+<h3>Automation Projects</h3>
+
+<div class="grid">
+
+<div class="card">📦 WMS Picklist Validation Automation</div>
+<div class="card">🏷 Promo Update Automation</div>
+<div class="card">🖨 PRN Barcode Printing Automation</div>
+<div class="card">📧 RTW Pickup Email Automation</div>
+
+</div>
+</div>
+</section>
+
+<section id="certificates" class="section reveal">
+<div class="container">
+<h3>Certificates</h3>
+
+<div class="grid">
+
+<div class="card">
+<h4>Generative AI Mastermind</h4>
+<a class="btn" href="generative-ai-mastermind.pdf" target="_blank">View</a>
+</div>
+
+<div class="card">
+<h4>Power BI Workshop</h4>
+<a class="btn" href="powerbi-workshop.pdf" target="_blank">View</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="section gray reveal">
+<div class="container">
+<h3>Contact</h3>
+
+<form action="https://formsubmit.co/sasikumar0107@gmail.com" method="POST" class="contact-form">
+<input name="name" placeholder="Name" required>
+<input name="email" type="email" placeholder="Email" required>
+<textarea name="message" placeholder="Message"></textarea>
+<button class="btn">Send</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+© 2026 Sasi Kumar M
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
