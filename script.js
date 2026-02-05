@@ -1,18 +1,20 @@
-document.addEventListener("DOMContentLoaded",()=>{
+// Typing animation for name
+const nameText = "Sasi Kumar M";
+const typedEl = document.getElementById("typedName");
 
-document.getElementById("themeToggle").onclick=()=>document.body.classList.toggle("dark");
+if (typedEl) {
+  let i = 0;
+  typedEl.style.opacity = 0;
 
-const reveals=document.querySelectorAll(".reveal");
+  function typeName() {
+    if (i === 0) typedEl.style.opacity = 1;
+    if (i < nameText.length) {
+      typedEl.textContent += nameText.charAt(i);
+      i++;
+      setTimeout(typeName, 100); // typing speed
+    }
+  }
 
-function reveal(){
-reveals.forEach(r=>{
-if(r.getBoundingClientRect().top<window.innerHeight-100){
-r.classList.add("active");
+  // small delay for nicer entrance
+  setTimeout(typeName, 300);
 }
-});
-}
-
-window.addEventListener("scroll",reveal);
-reveal();
-
-});
