@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sasi Kumar M | Portfolio</title>
+
+<title>Sasi Kumar M | Retail IT & Automation Portfolio</title>
+
+<meta name="description" content="Retail IT & Automation Professional – Python, SQL, Power BI, MIS, WMS Automation Projects">
+<meta name="keywords" content="Python Automation, SQL MIS, Power BI, Retail IT, WMS, Portfolio">
+<meta name="author" content="Sasi Kumar M">
+
+<meta property="og:title" content="Sasi Kumar M | Portfolio">
+<meta property="og:description" content="Python Automation, SQL MIS, Power BI Dashboards, WMS Projects">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./assets/profile.jpg">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4da3ff">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,24 +27,28 @@
 <div class="nav-container">
 <div class="logo">Sasi</div>
 <ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#automation">Automation</a></li>
-<li><a href="#certificates">Certificates</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#home" class="nav-link">Home</a></li>
+<li><a href="#about" class="nav-link">About</a></li>
+<li><a href="#experience" class="nav-link">Experience</a></li>
+<li><a href="#projects" class="nav-link">Projects</a></li>
+<li><a href="#certificates" class="nav-link">Certifications</a></li>
+<li><a href="#studies" class="nav-link">Studies</a></li>
+<li><a href="#contact" class="nav-link">Contact</a></li>
 </ul>
 <button id="themeToggle">🌙</button>
 </div>
 </nav>
 
-<header id="home" class="hero reveal">
+<div class="breadcrumbs">
+<span id="crumb">Home</span>
+</div>
+
+<header id="home" class="hero reveal" data-title="Home">
 <div class="hero-container">
 
 <div class="hero-text">
 <span class="badge">HELLO</span>
-<h1>I am Sasi Kumar M</h1>
+<h1>I am <span id="typedName"></span></h1>
 <h2>Retail IT & Automation Professional</h2>
 <p>Python • SQL • Power BI • Workflow Automation • MIS</p>
 
@@ -42,115 +59,190 @@
 </div>
 
 <div class="hero-image">
-<img src="./assets/profile.jpg">
+<img src="./assets/profile.jpg" loading="lazy" decoding="async">
 </div>
 
 </div>
 </header>
 
-<section id="about" class="section reveal">
+<section id="about" class="section reveal skeleton" data-title="About">
 <div class="container">
 <h3>About Me</h3>
 <p>
-Retail IT & MIS professional with 10+ years of experience in automation, analytics, and operational excellence.
-Specialized in Python automation, SQL reporting, and Power BI dashboards delivering measurable business impact.
+Retail IT & MIS professional with 10+ years of experience delivering automation,
+analytics, and operational excellence across retail and supply chain environments.
+</p>
+<p>
+Specialized in Python automation, SQL-driven MIS reporting, and Power BI dashboards.
+Improved order accuracy by 20%, reduced inventory holding costs by 25%, and lowered
+operational expenses by 10%.
 </p>
 </div>
 </section>
 
-<section id="skills" class="section gray reveal">
+<section id="experience" class="section gray reveal skeleton" data-title="Experience">
 <div class="container">
-<h3>Skills</h3>
-
-<div class="skill"><span>Workflow Automation</span><div class="bar"><div style="width:90%"></div></div></div>
-<div class="skill"><span>Python</span><div class="bar"><div style="width:85%"></div></div></div>
-<div class="skill"><span>SQL / MIS</span><div class="bar"><div style="width:90%"></div></div></div>
-<div class="skill"><span>Power BI</span><div class="bar"><div style="width:80%"></div></div></div>
-<div class="skill"><span>Visual Studio</span><div class="bar"><div style="width:75%"></div></div></div>
-<div class="skill"><span>Generative AI</span><div class="bar"><div style="width:70%"></div></div></div>
-
-</div>
-</section>
-
-<section id="experience" class="section reveal">
-<div class="container">
-<h3>Experience</h3>
+<h3>Work Experience</h3>
 
 <div class="timeline-item">
-<h4>Soch Apparels Pvt Ltd</h4>
-<p>Senior Executive – IT / MIS</p>
+<h4>Soch Apparels Pvt Ltd — Senior Executive (IT / MIS)</h4>
 <ul>
-<li>Python automation reduced manual MIS reporting.</li>
-<li>Power BI dashboards saved 10% operational costs.</li>
-<li>Improved order accuracy by 20%.</li>
-<li>Reduced inventory holding cost by 25%.</li>
+<li>Python automation removed manual MIS reporting.</li>
+<li>Power BI dashboards saved 10% operational cost.</li>
+<li>WMS improved order accuracy by 20%.</li>
+<li>Inventory holding cost reduced by 25%.</li>
 </ul>
 </div>
 
 <div class="timeline-item">
-<h4>MD Retail India Pvt Ltd</h4>
-<p>Executive – Supply Chain</p>
+<h4>MD Retail India Pvt Ltd — Executive (Supply Chain)</h4>
 <ul>
-<li>MIS reporting & logistics coordination.</li>
-<li>Inventory optimization support.</li>
+<li>Supply chain MIS & warehouse coordination.</li>
+<li>Inventory optimization reporting.</li>
 </ul>
 </div>
 
 </div>
 </section>
 
-<section id="automation" class="section gray reveal">
+<section id="projects" class="section reveal skeleton" data-title="Projects">
 <div class="container">
-<h3>Automation Projects</h3>
+<h3>Automation Projects (Python)</h3>
 
 <div class="grid">
-
-<div class="card">📦 WMS Picklist Validation Automation</div>
+<div class="card">📦 WMS Picklist Validation</div>
 <div class="card">🏷 Promo Update Automation</div>
-<div class="card">🖨 PRN Barcode Printing Automation</div>
+<div class="card">🖨 PRN Barcode Printing</div>
 <div class="card">📧 RTW Pickup Email Automation</div>
-
 </div>
 </div>
 </section>
 
-<section id="certificates" class="section reveal">
+<section id="certificates" class="section gray reveal skeleton" data-title="Certifications">
 <div class="container">
-<h3>Certificates</h3>
+<h3>Certifications</h3>
 
 <div class="grid">
 
 <div class="card">
-<h4>Generative AI Mastermind</h4>
-<a class="btn" href="generative-ai-mastermind.pdf" target="_blank">View</a>
+<h4>Generative AI Mastermind – Outskill</h4>
+<div class="cert-meta">
+<span class="verified">✔ Verified</span>
+<span class="date">Issued 2024</span>
+</div>
+<div class="tags"><span>Generative AI</span><span>Automation</span></div>
+<button class="btn preview-btn" data-src="generative-ai-mastermind.pdf">Preview</button>
 </div>
 
 <div class="card">
-<h4>Power BI Workshop</h4>
-<a class="btn" href="powerbi-workshop.pdf" target="_blank">View</a>
+<h4>Power BI Workshop – OfficeMaster</h4>
+<div class="cert-meta">
+<span class="verified">✔ Verified</span>
+<span class="date">Oct 2024</span>
+</div>
+<div class="tags"><span>Power BI</span><span>Analytics</span><span>MIS</span></div>
+<button class="btn preview-btn" data-src="powerbi-workshop.pdf">Preview</button>
 </div>
 
 </div>
 </div>
 </section>
 
-<section id="contact" class="section gray reveal">
+<section id="studies" class="section reveal skeleton" data-title="Studies">
+<div class="container">
+<h3>Studies</h3>
+<div class="card">
+<h4>Bachelor of Computer Science</h4>
+<p>Sri Venkateswara University (2010–2013)</p>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section gray reveal skeleton" data-title="Contact">
 <div class="container">
 <h3>Contact</h3>
 
+<p>
+Email: sasikumar0107@gmail.com<br>
+LinkedIn:
+<a href="https://www.linkedin.com/in/sasi-kumar-m-skr0107" target="_blank">
+linkedin.com/in/sasi-kumar-m-skr0107
+</a>
+</p>
+
 <form action="https://formsubmit.co/sasikumar0107@gmail.com" method="POST" class="contact-form">
-<input name="name" placeholder="Name" required>
-<input name="email" type="email" placeholder="Email" required>
+<input name="name" placeholder="Your Name" required>
+<input name="email" type="email" placeholder="Your Email" required>
 <textarea name="message" placeholder="Message"></textarea>
-<button class="btn">Send</button>
+<button class="btn">Send Message</button>
 </form>
 
 </div>
 </section>
 
-<footer>
-© 2026 Sasi Kumar M
+<footer class="site-footer">
+<div class="footer-container">
+<div>
+<h4>Sasi Kumar M</h4>
+<p>Retail IT & Automation | Python | SQL | Power BI | MIS</p>
+</div>
+
+<div>
+<h5>Quick Links</h5>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<div>
+<h5>Contact</h5>
+<p><a href="mailto:sasikumar0107@gmail.com">Email</a></p>
+<p><a href="https://wa.me/919164657851" target="_blank">WhatsApp</a></p>
+<p><a href="https://www.linkedin.com/in/sasi-kumar-m-skr0107" target="_blank">LinkedIn</a></p>
+</div>
+</div>
+
+<div class="footer-bottom">
+<span>© 2026 Sasi Kumar M</span>
+<span id="version">v2.0</span>
+</div>
 </footer>
+
+<!-- WhatsApp + Back to Top -->
+<a href="https://wa.me/919164657851" target="_blank" class="whatsapp-float">💬</a>
+<button id="backToTop">⬆</button>
+
+<!-- Install Prompt -->
+<div id="installPrompt" class="install-prompt">
+<span>Install this app</span>
+<button id="installBtn">Install</button>
+</div>
+
+<!-- Update Prompt -->
+<div id="updatePrompt" class="install-prompt">
+<span>New version available</span>
+<button id="updateBtn">Update</button>
+</div>
+
+<!-- Certificate Modal -->
+<div id="certModal" class="cert-modal">
+<div class="cert-modal-content">
+<span id="closeCert" class="cert-close">✕</span>
+<iframe id="certFrame"></iframe>
+</div>
+</div>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
 
 <script src="script.js"></script>
 </body>
