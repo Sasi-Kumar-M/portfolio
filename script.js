@@ -1,26 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",()=>{
 
-  // Dark mode
-  const toggle = document.getElementById("themeToggle");
-  if (toggle) {
-    toggle.onclick = () => {
-      document.body.classList.toggle("dark");
-    };
-  }
+document.getElementById("themeToggle").onclick=()=>document.body.classList.toggle("dark");
 
-  // Scroll animations
-  const reveals = document.querySelectorAll(".reveal");
+const reveals=document.querySelectorAll(".reveal");
 
-  function revealOnScroll() {
-    reveals.forEach(r => {
-      const top = r.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        r.classList.add("active");
-      }
-    });
-  }
+function reveal(){
+reveals.forEach(r=>{
+if(r.getBoundingClientRect().top<window.innerHeight-100){
+r.classList.add("active");
+}
+});
+}
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
+window.addEventListener("scroll",reveal);
+reveal();
 
 });
