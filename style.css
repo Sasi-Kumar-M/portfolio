@@ -224,5 +224,26 @@ transform:none;
 .timeline-date{grid-column:2;margin-bottom:6px}
 .timeline-dot{grid-row:1/span 2}
 }
+/* Professional Summary */
+
+.summary-box{
+  max-width:600px;
+  margin:15px auto 0;
+  background:rgba(255,255,255,.15);
+  padding:12px 18px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+/* Duration Badge */
+
+.duration{
+  background:#16a34a;
+  color:white;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  margin-left:6px;
+}
 
 
