@@ -47,13 +47,109 @@
 <div class="skill"><span>Power BI</span><div class="bar"><div style="width:80%"></div></div></div>
 </section>
 
+<!-- ================= EXPERIENCE ================= -->
+
 <section id="experience" class="section gray">
-<h3>Experience</h3>
-<ul>
-<li>Soch Apparels – Senior Executive IT/MIS</li>
-<li>MD Retail – Supply Chain Executive</li>
-</ul>
+<h3>Work Experience</h3>
+
+<div class="timeline">
+
+  <!-- SOCH -->
+  <div class="timeline-item">
+    <div class="timeline-icon">💼</div>
+
+    <div class="timeline-content card">
+      <h4>Soch Apparels Pvt Ltd</h4>
+      <img src="assets/soch-logo.png" class="company-logo" alt="Soch">
+
+      <p><strong>Senior Executive – Information Technology</strong>
+        <span class="date-badge">Mar 2024 – Present</span>
+      </p>
+
+      <p><strong>Senior Executive – MIS</strong>
+        <span class="date-badge">Sep 2017 – Feb 2024</span>
+      </p>
+
+      <!-- Tech Badges -->
+      <div class="badges">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Automation</span>
+        <span>Power BI</span>
+        <span>MIS</span>
+        <span>WMS</span>
+      </div>
+
+      <!-- Award -->
+      <div class="award-badge">
+        🏆 Best Team Player – MIS <span>(Feb 2024)</span>
+      </div>
+
+      <!-- Achievement Counters -->
+      <div class="counters">
+        <div><strong data-count="20">0</strong>% Accuracy</div>
+        <div><strong data-count="25">0</strong>% Inventory Cost ↓</div>
+        <div><strong data-count="15">0</strong>% Process Time ↓</div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="achievements">
+        <button class="toggle-achievements">Show Key Achievements</button>
+        <div class="achievements-body">
+          <ul>
+            <li>Improved warehouse order accuracy via WMS automation.</li>
+            <li>Reduced inventory holding costs using MIS insights.</li>
+            <li>Built PRN automation for barcode printing.</li>
+            <li>Delivered KPI dashboards for operations.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MD RETAIL -->
+  <div class="timeline-item">
+    <div class="timeline-icon">🏬</div>
+
+    <div class="timeline-content card">
+      <h4>MD Retail India Pvt Ltd</h4>
+      <img src="assets/mdretail-logo.png" class="company-logo" alt="MD Retail">
+
+      <p><strong>Executive – Supply Chain Management</strong>
+        <span class="date-badge">Oct 2013 – Aug 2017</span>
+      </p>
+
+      <div class="badges">
+        <span>Supply Chain</span>
+        <span>MIS</span>
+        <span>Reporting</span>
+        <span>Inventory</span>
+      </div>
+
+      <div class="counters">
+        <div><strong data-count="4">0</strong>+ Years</div>
+        <div><strong data-count="100">0</strong>% Ops Support</div>
+      </div>
+
+      <div class="achievements">
+        <button class="toggle-achievements">Show Key Achievements</button>
+        <div class="achievements-body">
+          <ul>
+            <li>Supported inventory optimization.</li>
+            <li>Prepared operational MIS.</li>
+            <li>Contributed to fulfillment improvements.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 </section>
+
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects" class="section">
 <h3>Automation Projects</h3>
@@ -83,51 +179,18 @@
 </section>
 
 <section id="contact" class="section gray">
-<h3>Contact Me</h3>
-
-<form id="contactForm"
-  action="https://formsubmit.co/ajax/sasikumar0107@gmail.com"
-  method="POST"
-  class="contact-form">
-
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-
-<input type="text" id="name" name="name" placeholder="Your Name" required>
-<input type="email" id="email" name="email" placeholder="Your Email" required>
-<input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-<textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-<button class="btn" type="submit">Send Message</button>
-<button type="button" class="btn outline" id="waChatBtn">Chat on WhatsApp</button>
-</form>
-
-<p id="formSuccess" class="form-success">✅ Thank you! Your message has been sent.</p>
-
-<div class="map-wrap">
-<iframe src="https://www.google.com/maps?q=Bengaluru,Karnataka,India&output=embed" loading="lazy"></iframe>
-</div>
+<h3>Contact</h3>
+<p>Email: sasikumar0107@gmail.com</p>
 </section>
 
 <footer>© 2026 Sasi Kumar M</footer>
 
-<a href="https://wa.me/919164657851" class="whatsapp">💬</a>
 <button id="backToTop">⬆</button>
 
-<!-- Certificate Modal -->
 <div id="certModal">
   <span id="closeCert">✕</span>
   <iframe id="certFrame"></iframe>
 </div>
-
-<!-- WhatsApp Toast -->
-<div id="waToast" class="wa-toast">✅ Opening WhatsApp…</div>
-
-<script>
-if("serviceWorker" in navigator){
- navigator.serviceWorker.register("service-worker.js");
-}
-</script>
 
 <script src="script.js"></script>
 </body>
