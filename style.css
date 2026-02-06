@@ -182,11 +182,11 @@ position:relative;
 }
 
 .timeline-dot img{
-width:18px;
-height:18px;
-background:white;
-border-radius:50%;
-padding:2px;
+  width:22px;        /* increased from 18 */
+  height:22px;
+  background:white;
+  border-radius:50%;
+  padding:2px;
 }
 
 .soch-icon{background:#2563eb}
@@ -224,3 +224,4 @@ transform:none;
 .timeline-date{grid-column:2;margin-bottom:6px}
 .timeline-dot{grid-row:1/span 2}
 }
+
