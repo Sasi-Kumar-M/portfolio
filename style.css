@@ -14,11 +14,12 @@ nav ul{display:flex;gap:10px;list-style:none}
 #backToTop{position:fixed;bottom:70px;right:20px}
 .study-card{display:flex;gap:15px;align-items:center}
 .study-logo{width:70px}
-.profile-pic{width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 5px 15px rgba(0,0,0,.3)}
-
-.contact-form{max-width:500px}
-.contact-form input,.contact-form textarea{
-  width:100%;padding:10px;margin-bottom:10px;border-radius:6px;border:1px solid #ccc
+.profile-pic{
+  width:140px;      /* reduced from 180 */
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 4px 10px rgba(0,0,0,.25);
 }
 .form-success{display:none;color:green;font-weight:600}
 
@@ -41,3 +42,4 @@ nav ul{display:flex;gap:10px;list-style:none}
   display:none;
   z-index:2000;
 }
+
