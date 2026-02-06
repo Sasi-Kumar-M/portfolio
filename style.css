@@ -1,230 +1,62 @@
 :root{
---bg:#f5f7fb;
---card:white;
---text:#222;
---primary:#2563eb;
+  --bg:#f5f7fb;
+  --card:white;
+  --text:#222;
+  --primary:#2563eb;
 }
 
 body.dark{
---bg:#0f172a;
---card:#1e293b;
---text:white;
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:white;
 }
 
 body{
-margin:0;
-font-family:Arial;
-background:var(--bg);
-color:var(--text);
-transition:.3s;
+  margin:0;
+  font-family:Arial;
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
 }
 
+/* Header */
+
 header{
-background:var(--primary);
-color:white;
-padding:60px 20px;
-text-align:center;
+  background:var(--primary);
+  color:white;
+  padding:60px 20px;
+  text-align:center;
 }
 
 #themeToggle{
-position:absolute;
-top:20px;
-right:20px;
-background:white;
-border:none;
-padding:8px;
-border-radius:50%;
-cursor:pointer;
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:white;
+  border:none;
+  padding:8px;
+  border-radius:50%;
+  cursor:pointer;
 }
 
 .container{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
 }
 
-.gray{background:var(--bg)}
+.gray{
+  background:var(--bg);
+}
 
 .profile{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-}
-
-.btn{
-background:var(--primary);
-color:white;
-padding:10px 20px;
-border-radius:20px;
-border:none;
-text-decoration:none;
-}
-
-.btn.outline{
-background:none;
-border:1px solid white;
-}
-
-.hero-actions{margin-top:15px}
-
-.card{
-background:var(--card);
-padding:20px;
-border-radius:12px;
-margin:15px 0;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.tags span{
-background:var(--primary);
-color:white;
-padding:4px 10px;
-border-radius:12px;
-font-size:12px;
-margin:3px;
-display:inline-block;
-}
-
-.award{color:#b45309;font-weight:600}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-
-.study{
-display:flex;
-gap:15px;
-align-items:center;
-}
-
-.study img{width:70px}
-
-input,textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-.contact-links{
-margin-top:15px;
-font-size:26px;
-}
-
-.contact-links a{
-margin-right:15px;
-color:var(--primary);
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:var(--primary);
-color:white;
-}
-
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-}
-
-/* Timeline */
-
-.timeline{
-position:relative;
-margin-top:30px;
-padding-left:40px;
-}
-
-.timeline::before{
-content:"";
-position:absolute;
-left:120px;
-top:0;
-bottom:0;
-width:2px;
-background:var(--primary);
-}
-
-.timeline-item{
-display:grid;
-grid-template-columns:100px 40px 1fr;
-gap:10px;
-margin-bottom:30px;
-align-items:flex-start;
-}
-
-.timeline-date{
-font-weight:600;
-color:var(--primary);
-font-size:14px;
-}
-
-.timeline-dot{
-width:36px;
-height:36px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-top:4px;
-position:relative;
-}
-
-.timeline-dot img{
-  width:22px;        /* increased from 18 */
-  height:22px;
-  background:white;
+  width:140px;
+  height:140px;
   border-radius:50%;
-  padding:2px;
+  object-fit:cover;
 }
 
-.soch-icon{background:#2563eb}
-.md-icon{background:#16a34a}
-
-.timeline-item.show .timeline-dot{
-animation:pulse 1.2s ease-out;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}
-70%{box-shadow:0 0 0 12px rgba(37,99,235,0)}
-100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}
-}
-
-/* Reveal */
-
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:.6s;
-}
-
-.reveal.show{
-opacity:1;
-transform:none;
-}
-
-/* Mobile */
-
-@media(max-width:700px){
-.timeline{padding-left:0}
-.timeline::before{left:8px}
-.timeline-item{grid-template-columns:20px 1fr}
-.timeline-date{grid-column:2;margin-bottom:6px}
-.timeline-dot{grid-row:1/span 2}
-}
-/* Professional Summary */
+/* Hero Summary */
 
 .summary-box{
   max-width:600px;
@@ -235,7 +67,56 @@ transform:none;
   font-size:14px;
 }
 
-/* Duration Badge */
+/* Buttons */
+
+.btn{
+  background:var(--primary);
+  color:white;
+  padding:10px 20px;
+  border-radius:20px;
+  border:none;
+  text-decoration:none;
+}
+
+.btn.outline{
+  background:none;
+  border:1px solid white;
+}
+
+.hero-actions{
+  margin-top:15px;
+}
+
+/* Cards */
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  margin:15px 0;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Tags */
+
+.tags span{
+  background:var(--primary);
+  color:white;
+  padding:4px 10px;
+  border-radius:12px;
+  font-size:12px;
+  margin:3px;
+  display:inline-block;
+}
+
+/* Award */
+
+.award{
+  color:#b45309;
+  font-weight:600;
+}
+
+/* Duration */
 
 .duration{
   background:#16a34a;
@@ -246,4 +127,178 @@ transform:none;
   margin-left:6px;
 }
 
+/* Grid */
 
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+/* Studies */
+
+.study{
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.study img{
+  width:70px;
+}
+
+/* Forms */
+
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* Contact */
+
+.contact-links{
+  margin-top:15px;
+  font-size:26px;
+}
+
+.contact-links a{
+  margin-right:15px;
+  color:var(--primary);
+}
+
+/* Footer */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:var(--primary);
+  color:white;
+}
+
+/* WhatsApp */
+
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+}
+
+/* Timeline */
+
+.timeline{
+  position:relative;
+  margin-top:30px;
+  padding-left:40px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:120px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:var(--primary);
+}
+
+.timeline-item{
+  display:grid;
+  grid-template-columns:100px 40px 1fr;
+  gap:10px;
+  margin-bottom:30px;
+  align-items:flex-start;
+}
+
+.timeline-date{
+  font-weight:600;
+  color:var(--primary);
+  font-size:14px;
+}
+
+/* Square Logo Badges */
+
+.timeline-dot{
+  width:44px;
+  height:44px;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:4px;
+  position:relative;
+  border:2px solid white;
+}
+
+.timeline-dot img{
+  width:32px;
+  height:32px;
+  object-fit:contain;
+}
+
+/* Company Colors */
+
+.soch-icon{
+  background:#2563eb;
+}
+
+.md-icon{
+  background:#16a34a;
+}
+
+/* Pulse Animation */
+
+.timeline-item.show .timeline-dot{
+  animation:pulse 1.2s ease-out;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}
+  70%{box-shadow:0 0 0 12px rgba(37,99,235,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}
+}
+
+/* Scroll Reveal */
+
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.6s;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+  .timeline{
+    padding-left:0;
+  }
+
+  .timeline::before{
+    left:8px;
+  }
+
+  .timeline-item{
+    grid-template-columns:20px 1fr;
+  }
+
+  .timeline-date{
+    grid-column:2;
+    margin-bottom:6px;
+  }
+
+  .timeline-dot{
+    grid-row:1/span 2;
+  }
+}
