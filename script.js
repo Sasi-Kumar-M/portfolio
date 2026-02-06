@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
-// Typing name
+// Typing animation
 let t="Sasi Kumar M",i=0;
 (function type(){if(i<t.length){typedName.textContent+=t[i++];setTimeout(type,80)}})();
 
@@ -17,63 +17,35 @@ closeCert.onclick=()=>{certModal.style.display="none";certFrame.src=""};
 window.onscroll=()=>{backToTop.style.display=scrollY>300?"block":"none"};
 backToTop.onclick=()=>scrollTo({top:0,behavior:"smooth"});
 
-// Contact form validation + success
-const form=document.getElementById("contactForm");
-const success=document.getElementById("formSuccess");
+// Timeline scroll reveal
+const items=document.querySelectorAll(".timeline-item");
+const obs=new IntersectionObserver(es=>{
+ es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show");});
+},{threshold:.2});
+items.forEach(i=>obs.observe(i));
 
-if(form){
- form.addEventListener("submit",e=>{
-  e.preventDefault();
-  const name=nameEl();
-  const email=emailEl();
-  const phone=phoneEl();
-  const msg=msgEl();
+// Expand / Collapse achievements
+document.querySelectorAll(".toggle-achievements").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  const body=btn.nextElementSibling;
+  body.classList.toggle("show");
+  btn.textContent=body.classList.contains("show")?"Hide Key Achievements":"Show Key Achievements";
+ });
+});
 
-  if(name.length<2||!email.includes("@")||phone.length<8||msg.length<5){
-    alert("Please fill all fields correctly");
-    return;
-  }
-
-  fetch(form.action,{method:"POST",body:new FormData(form)})
-  .then(()=>{form.reset();success.style.display="block";})
-  .catch(()=>alert("Unable to send"));
+// Animated counters
+function animateCounters(){
+ document.querySelectorAll("[data-count]").forEach(el=>{
+  const target=+el.dataset.count;
+  let c=0;
+  const step=target/40;
+  const i=setInterval(()=>{
+    c+=step;
+    if(c>=target){el.textContent=target;clearInterval(i);}
+    else el.textContent=Math.round(c);
+  },25);
  });
 }
-
-// Helpers
-function nameEl(){return document.getElementById("name").value.trim()}
-function emailEl(){return document.getElementById("email").value.trim()}
-function phoneEl(){return document.getElementById("phone").value.trim()}
-function msgEl(){return document.getElementById("message").value.trim()}
-
-// WhatsApp click-to-chat (subject + mobile/desktop + toast)
-const waBtn=document.getElementById("waChatBtn");
-const toast=document.getElementById("waToast");
-const yourNumber="919164657851";
-
-function isMobile(){
- return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-}
-
-if(waBtn){
- waBtn.addEventListener("click",()=>{
-  const phone=phoneEl();
-  if(phone.length<8){alert("Enter phone number");return;}
-
-  const subject="Portfolio Contact";
-  const text=encodeURIComponent(
-   `Subject: ${subject}\nName: ${nameEl()}\nPhone: ${phone}\n\n${msgEl()}`
-  );
-
-  const url=isMobile()
-   ? `whatsapp://send?phone=${yourNumber}&text=${text}`
-   : `https://wa.me/${yourNumber}?text=${text}`;
-
-  toast.style.display="block";
-  setTimeout(()=>toast.style.display="none",2000);
-
-  window.open(url,"_blank");
- });
-}
+setTimeout(animateCounters,800);
 
 });
