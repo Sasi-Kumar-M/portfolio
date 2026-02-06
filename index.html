@@ -3,31 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>Sasi Kumar M | Portfolio</title>
 
-<meta name="description" content="Retail IT & Automation Professional – Python, SQL, Power BI, MIS">
-<meta name="author" content="Sasi Kumar M">
-
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
 <meta name="theme-color" content="#4da3ff">
 
-<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <nav>
 <div class="nav-container">
 <div class="logo">Sasi</div>
 <ul>
-<li><a href="#home" class="nav-link">Home</a></li>
-<li><a href="#about" class="nav-link">About</a></li>
-<li><a href="#experience" class="nav-link">Experience</a></li>
-<li><a href="#projects" class="nav-link">Projects</a></li>
-<li><a href="#certificates" class="nav-link">Certifications</a></li>
-<li><a href="#studies" class="nav-link">Studies</a></li>
-<li><a href="#contact" class="nav-link">Contact</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certificates">Certifications</a></li>
+<li><a href="#studies">Studies</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 <button id="themeToggle">🌙</button>
 </div>
@@ -35,23 +30,23 @@
 
 <header id="home" class="hero">
 <div class="hero-container">
-
 <div>
 <h1>I am <span id="typedName"></span></h1>
-<h2>Retail IT & Automation Professional</h2>
-<p>Python • SQL • Power BI • MIS</p>
-<a class="btn" href="#contact">Contact</a>
-<a class="btn outline" href="resume.pdf" download>Resume</a>
+<h2>Retail IT & Automation</h2>
 </div>
-
 <img src="assets/profile.jpg" loading="lazy">
-
 </div>
 </header>
 
 <section id="about" class="section">
 <h3>About</h3>
 <p>Retail IT professional specializing in Python automation, SQL MIS and Power BI dashboards.</p>
+
+<h3>Skills</h3>
+<div class="skill"><span>Python</span><div class="bar"><div style="width:90%"></div></div></div>
+<div class="skill"><span>SQL</span><div class="bar"><div style="width:85%"></div></div></div>
+<div class="skill"><span>Power BI</span><div class="bar"><div style="width:80%"></div></div></div>
+
 </section>
 
 <section id="experience" class="section gray">
@@ -74,25 +69,19 @@
 
 <section id="certificates" class="section gray">
 <h3>Certifications</h3>
-
-<div class="grid">
-
-<div class="card">
-<h4>Generative AI Mastermind</h4>
-<button class="btn preview-btn" data-src="generative-ai-mastermind.pdf">Preview</button>
-</div>
-
-<div class="card">
-<h4>Power BI Workshop</h4>
-<button class="btn preview-btn" data-src="powerbi-workshop.pdf">Preview</button>
-</div>
-
-</div>
+<button class="preview-btn btn" data-src="generative-ai-mastermind.pdf">Generative AI</button>
+<button class="preview-btn btn" data-src="powerbi-workshop.pdf">Power BI</button>
 </section>
 
 <section id="studies" class="section">
 <h3>Studies</h3>
-<p>BSc Computer Science</p>
+<div class="card study-card">
+<img src="assets/svu-logo.png" class="study-logo">
+<div>
+<h4>Sri Venkateshwara University, Tirupati</h4>
+<p>BSc Computer Science — Completed 2013</p>
+</div>
+</div>
 </section>
 
 <section id="contact" class="section gray">
@@ -100,15 +89,10 @@
 <p>Email: sasikumar0107@gmail.com</p>
 </section>
 
-<footer>
-© 2026 Sasi Kumar M
-</footer>
+<footer>© 2026 Sasi Kumar M</footer>
 
 <a href="https://wa.me/919164657851" class="whatsapp">💬</a>
 <button id="backToTop">⬆</button>
-
-<div id="installPrompt"><button id="installBtn">Install</button></div>
-<div id="updatePrompt"><button id="updateBtn">Update</button></div>
 
 <div id="certModal">
 <span id="closeCert">✕</span>
@@ -116,7 +100,7 @@
 </div>
 
 <script>
-if("serviceWorker" in navigator){
+if("serviceWorker"in navigator){
  navigator.serviceWorker.register("service-worker.js");
 }
 </script>
