@@ -1,5 +1,8 @@
 {
-"name":"Sasi Portfolio",
-"start_url":"./",
-"display":"standalone"
+  "name":"Sasi Kumar Portfolio",
+  "short_name":"Sasi",
+  "start_url":"./",
+  "display":"standalone",
+  "theme_color":"#4da3ff",
+  "background_color":"#ffffff"
 }
