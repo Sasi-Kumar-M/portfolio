@@ -8,34 +8,33 @@
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
 <meta name="theme-color" content="#4da3ff">
-
 </head>
+
 <body>
 
 <nav>
-<div class="nav-container">
-<div class="logo">Sasi</div>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#certificates">Certifications</a></li>
-<li><a href="#studies">Studies</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<button id="themeToggle">🌙</button>
-</div>
+  <div class="nav-container">
+    <div class="logo">Sasi</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certifications</a></li>
+      <li><a href="#studies">Studies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <header id="home" class="hero">
-<div class="hero-container">
-<div>
-<h1>I am <span id="typedName"></span></h1>
-<h2>Retail IT & Automation</h2>
-</div>
-<img src="assets/profile.jpg" loading="lazy">
-</div>
+  <div class="hero-container">
+    <div>
+      <h1>I am <span id="typedName"></span></h1>
+      <h2>Retail IT & Automation</h2>
+    </div>
+    <img src="assets/profile.jpg" class="profile-pic" loading="lazy">
+  </div>
 </header>
 
 <section id="about" class="section">
@@ -46,7 +45,6 @@
 <div class="skill"><span>Python</span><div class="bar"><div style="width:90%"></div></div></div>
 <div class="skill"><span>SQL</span><div class="bar"><div style="width:85%"></div></div></div>
 <div class="skill"><span>Power BI</span><div class="bar"><div style="width:80%"></div></div></div>
-
 </section>
 
 <section id="experience" class="section gray">
@@ -76,17 +74,39 @@
 <section id="studies" class="section">
 <h3>Studies</h3>
 <div class="card study-card">
-<img src="assets/svu-logo.png" class="study-logo">
-<div>
-<h4>Sri Venkateshwara University, Tirupati</h4>
-<p>BSc Computer Science — Completed 2013</p>
-</div>
+  <img src="assets/svu-logo.png" class="study-logo">
+  <div>
+    <h4>Sri Venkateshwara University, Tirupati</h4>
+    <p>BSc Computer Science — Completed 2013</p>
+  </div>
 </div>
 </section>
 
 <section id="contact" class="section gray">
-<h3>Contact</h3>
-<p>Email: sasikumar0107@gmail.com</p>
+<h3>Contact Me</h3>
+
+<form id="contactForm"
+  action="https://formsubmit.co/ajax/sasikumar0107@gmail.com"
+  method="POST"
+  class="contact-form">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+<input type="text" id="name" name="name" placeholder="Your Name" required>
+<input type="email" id="email" name="email" placeholder="Your Email" required>
+<input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+<textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+<button class="btn" type="submit">Send Message</button>
+<button type="button" class="btn outline" id="waChatBtn">Chat on WhatsApp</button>
+</form>
+
+<p id="formSuccess" class="form-success">✅ Thank you! Your message has been sent.</p>
+
+<div class="map-wrap">
+<iframe src="https://www.google.com/maps?q=Bengaluru,Karnataka,India&output=embed" loading="lazy"></iframe>
+</div>
 </section>
 
 <footer>© 2026 Sasi Kumar M</footer>
@@ -94,13 +114,17 @@
 <a href="https://wa.me/919164657851" class="whatsapp">💬</a>
 <button id="backToTop">⬆</button>
 
+<!-- Certificate Modal -->
 <div id="certModal">
-<span id="closeCert">✕</span>
-<iframe id="certFrame"></iframe>
+  <span id="closeCert">✕</span>
+  <iframe id="certFrame"></iframe>
 </div>
 
+<!-- WhatsApp Toast -->
+<div id="waToast" class="wa-toast">✅ Opening WhatsApp…</div>
+
 <script>
-if("serviceWorker"in navigator){
+if("serviceWorker" in navigator){
  navigator.serviceWorker.register("service-worker.js");
 }
 </script>
