@@ -43,7 +43,7 @@ nav ul{display:flex;gap:10px;list-style:none}
 
 /* Logos */
 
-.company-logo{width:90px;margin:6px 0;transition:.3s}
+.company-logo{width:60px;margin:6px 0;transition:.3s}
 .company-logo:hover{transform:scale(1.08);opacity:.8}
 
 /* Tech badges */
@@ -72,3 +72,4 @@ nav ul{display:flex;gap:10px;list-style:none}
 .toggle-achievements{background:none;border:none;color:#4da3ff;cursor:pointer;font-weight:600}
 .achievements-body{display:none}
 .achievements-body.show{display:block}
+
