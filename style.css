@@ -117,7 +117,7 @@ width:44px;height:44px;border-radius:8px;
 display:flex;align-items:center;justify-content:center;
 }
 
-.timeline-dot img{width:30px}
+.timeline-dot img{width:80px}
 
 /* GRID */
 
@@ -139,3 +139,4 @@ background:#25d366;color:white;padding:15px;border-radius:50%;
 @media(max-width:700px){
 .nav-links{flex-wrap:wrap;justify-content:center}
 }
+
