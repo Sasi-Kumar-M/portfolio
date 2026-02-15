@@ -3,40 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sasi Kumar M | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Smooth Scroll -->
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-
 </head>
 
 <body>
-
-<!-- ✅ LOADER -->
-<div id="loader">
-  <h1 class="loader-logo">Sasi Kumar</h1>
-</div>
-
-<!-- ✅ PROGRESS BAR -->
-<div id="progressBar"></div>
 
 <header>
 <div class="container hero">
 
 <button id="themeToggle">🌙</button>
 
-<!-- ✅ FIXED IMAGE -->
-<img src="assets/profile.jpg" class="profile parallax" data-speed="0.2" alt="Sasi Kumar">
+<img src="assets/profile.jpg" class="profile">
 
 <h1>Sasi Kumar M</h1>
 <h3>Retail IT & Automation | Python | SQL | Power BI</h3>
 
 <div class="summary-box">
-Retail IT & Automation professional with 10+ years of experience in MIS, warehouse systems, Python automation and Power BI dashboards.
+Retail IT & Automation professional with 10+ years of experience in MIS, warehouse systems, Python automation and Power BI dashboards. Proven impact in cost reduction, accuracy improvement, and workflow optimization.
 </div>
 
 <div class="hero-actions">
@@ -49,48 +35,76 @@ Retail IT & Automation professional with 10+ years of experience in MIS, warehou
 </div>
 </header>
 
-<!-- ABOUT -->
 <section class="container reveal">
-<h2><i class="fas fa-user"></i> About Me</h2>
+<h2>About Me</h2>
 <p>
 Retail IT professional specializing in Python automation, SQL-based MIS systems and Power BI dashboards.
+Experienced in warehouse automation, reporting, and operational optimization.
 </p>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="container gray reveal">
-<h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+
+<section class="container gray">
+<h2>Work Experience</h2>
 
 <div class="timeline">
 
+<!-- SOCH -->
 <div class="timeline-item reveal">
+
 <div class="timeline-date">2017 – Present</div>
 
 <div class="timeline-dot soch-icon">
-<img src="assets/soch-logo.png" alt="Soch">
+<img src="assets/soch-logo.png">
 </div>
 
 <div class="timeline-card card">
-<h3>Soch Apparels Pvt Ltd</h3>
-<p><b>Senior Executive – IT</b></p>
+
+<h3>Soch Apparels Pvt Ltd <span class="duration">6+ Years</span></h3>
+<p><b>Senior Executive – Information Technology</b> (Mar 2024 – Present)</p>
+<p><b>Senior Executive – MIS</b> (Sep 2017 – Feb 2024)</p>
+
+<div class="tags">
+<span>Python</span><span>SQL</span><span>Automation</span><span>Power BI</span>
+</div>
+
+<p class="award">🏆 Best Team Player – MIS (Feb 2024)</p>
+
 <ul>
 <li>Warehouse automation improving accuracy by ~20%</li>
-<li>Reduced inventory costs by ~25%</li>
+<li>Reduced inventory holding costs by ~25%</li>
 <li>Built PRN barcode automation</li>
+<li>Designed KPI dashboards</li>
 </ul>
+
 </div>
 </div>
 
+<!-- MD RETAIL -->
+
 <div class="timeline-item reveal">
+
 <div class="timeline-date">2013 – 2017</div>
 
 <div class="timeline-dot md-icon">
-<img src="assets/mdretail-logo.png" alt="MD Retail">
+<img src="assets/mdretail-logo.png">
 </div>
 
 <div class="timeline-card card">
-<h3>MD Retail India Pvt Ltd</h3>
-<p><b>Executive – Supply Chain</b></p>
+
+<h3>MD Retail India Pvt Ltd <span class="duration">4 Years</span></h3>
+<p><b>Executive – Supply Chain</b> (Oct 2013 – Aug 2017)</p>
+
+<div class="tags">
+<span>Supply Chain</span><span>MIS</span><span>Inventory</span>
+</div>
+
+<ul>
+<li>Inventory planning & logistics reporting</li>
+<li>Operational process improvement</li>
+</ul>
+
 </div>
 </div>
 
@@ -98,8 +112,9 @@ Retail IT professional specializing in Python automation, SQL-based MIS systems 
 </section>
 
 <!-- PROJECTS -->
+
 <section class="container reveal">
-<h2><i class="fas fa-code"></i> Automation Projects</h2>
+<h2>Automation Projects</h2>
 
 <div class="grid">
 <div class="card">📦 WMS Picklist Validation</div>
@@ -111,24 +126,26 @@ Retail IT professional specializing in Python automation, SQL-based MIS systems 
 </section>
 
 <!-- CERTIFICATIONS -->
+
 <section class="container gray reveal">
-<h2><i class="fas fa-certificate"></i> Certifications</h2>
+<h2>Certifications</h2>
 
 <div class="grid">
-<a class="card cert" onclick="openModal('generative-ai-mastermind.pdf')">📜 Generative AI</a>
-<a class="card cert" onclick="openModal('powerbi-workshop.pdf')">📊 Power BI</a>
+<a class="card cert" href="generative-ai-mastermind.pdf" target="_blank">📜 Generative AI Mastermind</a>
+<a class="card cert" href="powerbi-workshop.pdf" target="_blank">📊 Power BI Workshop</a>
 </div>
 
 </section>
 
-<!-- EDUCATION -->
+<!-- STUDIES -->
+
 <section class="container reveal">
-<h2><i class="fas fa-graduation-cap"></i> Education</h2>
+<h2>Studies</h2>
 
 <div class="card study">
-<img src="assets/svu-logo.png" alt="SVU">
+<img src="assets/svu-logo.png">
 <div>
-<h3>Sri Venkateshwara University</h3>
+<h3>Sri Venkateshwara University, Tirupati</h3>
 <p>BSc Computer Science – 2013</p>
 </div>
 </div>
@@ -136,29 +153,36 @@ Retail IT professional specializing in Python automation, SQL-based MIS systems 
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact" class="container reveal">
-<h2><i class="fas fa-envelope"></i> Contact</h2>
+<h2>Contact</h2>
 
 <form id="contactForm">
-<input placeholder="Your Name" required>
-<input placeholder="Your Email" required>
-<textarea placeholder="Message"></textarea>
+<input id="name" placeholder="Your Name" required>
+<input id="email" placeholder="Your Email" required>
+<input id="phone" placeholder="Phone Number" required>
+<textarea id="message" placeholder="Message"></textarea>
+
 <button class="btn">Send Message</button>
 </form>
 
-</section>
-
-<!-- MODAL -->
-<div id="certModal">
-<span onclick="closeModal()">&times;</span>
-<iframe id="certFrame"></iframe>
+<div class="contact-links">
+<a href="mailto:sasikumar0107@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://wa.me/919164657851" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.linkedin.com/in/sasi-kumar-m-skr0107" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
+
+</section>
 
 <footer>
 © 2026 Sasi Kumar M
 </footer>
 
-<script src="script.js"></script>
+<a href="https://wa.me/919164657851" class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
+<script src="script.js"></script>
 </body>
 </html>
+
