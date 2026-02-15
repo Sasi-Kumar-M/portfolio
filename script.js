@@ -1,47 +1,51 @@
 // Loader
 window.addEventListener("load", () => {
-  setTimeout(()=>{
+  setTimeout(() => {
     document.getElementById("loader").classList.add("hide");
-  },1000);
+  }, 800);
 });
 
-// Lenis
-const lenis = new Lenis();
-function raf(time){
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+// Reveal Animation
+const reveals = document.querySelectorAll(".reveal");
 
-// Section Animation
-const sections = document.querySelectorAll("section");
+function revealOnScroll() {
+  const trigger = window.innerHeight - 80;
 
-function showSections(){
-  const trigger = window.innerHeight * 0.8;
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
 
-  sections.forEach(sec=>{
-    if(sec.getBoundingClientRect().top < trigger){
-      sec.classList.add("active");
+    if (top < trigger) {
+      el.classList.add("show");
     }
   });
 }
 
-window.addEventListener("scroll", showSections);
-showSections();
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 
-// Progress Bar
-window.addEventListener("scroll", ()=>{
-  let sc = window.scrollY;
-  let h = document.body.scrollHeight - window.innerHeight;
-  document.getElementById("progressBar").style.width = (sc/h)*100 + "%";
-});
-
-// Modal
-function openModal(file){
-  document.getElementById("certModal").style.display="flex";
-  document.getElementById("certFrame").src=file;
+// Smooth Scroll (SAFE check)
+if (typeof Lenis !== "undefined") {
+  const lenis = new Lenis();
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 }
 
-function closeModal(){
-  document.getElementById("certModal").style.display="none";
+// Progress Bar
+window.addEventListener("scroll", () => {
+  const sc = window.scrollY;
+  const h = document.body.scrollHeight - window.innerHeight;
+  document.getElementById("progressBar").style.width = (sc / h) * 100 + "%";
+});
+
+// Certificate Modal
+function openModal(file) {
+  document.getElementById("certModal").style.display = "flex";
+  document.getElementById("certFrame").src = file;
+}
+
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
 }
