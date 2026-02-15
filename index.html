@@ -24,10 +24,9 @@
 <!-- Progress Bar -->
 <div id="progressBar"></div>
 
+<!-- HERO -->
 <header>
 <div class="container hero">
-
-<button id="themeToggle">🌙</button>
 
 <img src="assets/profile.jpg" class="profile parallax" data-speed="0.2">
 
@@ -35,47 +34,159 @@
 <h3>Retail IT & Automation | Python | SQL | Power BI</h3>
 
 <div class="summary-box">
-Retail IT & Automation professional with 10+ years of experience in MIS, automation and dashboards.
+10+ years experience in automation, MIS, dashboards & warehouse systems.
 </div>
 
 <div class="hero-actions">
-<a href="#contact" class="btn">Contact Me</a>
-<a href="#" class="btn outline">Download Resume</a>
+<a href="#contact" class="btn">Contact</a>
+<a href="assets/resume.pdf" class="btn outline">Download CV</a>
 </div>
 
 </div>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 <div class="container">
-<h2>About Me</h2>
-<p>Retail IT professional specializing in automation & analytics.</p>
+<h2><i class="fas fa-user"></i> About Me</h2>
+<p>Retail IT professional specializing in automation, SQL and Power BI dashboards.</p>
 </div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section id="projects">
 <div class="container">
-<h2>Projects</h2>
+<h2><i class="fas fa-briefcase"></i> Work & Projects</h2>
+
 <div class="grid">
-<div class="card">WMS Automation</div>
-<div class="card">Barcode System</div>
+<div class="card">WMS Automation (20% accuracy)</div>
+<div class="card">Barcode PRN System</div>
+<div class="card">Power BI Dashboards</div>
 <div class="card">Email Automation</div>
 </div>
+
 </div>
 </section>
 
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+<h2><i class="fas fa-star"></i> Skills</h2>
+
+<div class="tags">
+<span>Python</span><span>SQL</span><span>Power BI</span>
+<span>Automation</span><span>MIS</span>
+</div>
+
+</div>
+</section>
+
+<!-- TECH STACK -->
+<section id="tech">
+<div class="container">
+<h2><i class="fas fa-code"></i> Tech & Management</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Technical</h3>
+<ul>
+<li>Python</li><li>SQL</li><li>Power BI</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Management</h3>
+<ul>
+<li>Process Optimization</li>
+<li>Inventory Control</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="container">
+<h2><i class="fas fa-building"></i> Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-date">2017–Present</div>
+<div class="timeline-dot"><img src="assets/soch-logo.png"></div>
+<div class="card">
+<h3>Soch Apparels</h3>
+<p>Senior Executive – IT</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">2013–2017</div>
+<div class="timeline-dot"><img src="assets/mdretail-logo.png"></div>
+<div class="card">
+<h3>MD Retail</h3>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+<div class="container">
+<h2><i class="fas fa-trophy"></i> Awards</h2>
+<div class="card">🏆 Best Team Player – MIS (2024)</div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<div class="container">
+<h2><i class="fas fa-certificate"></i> Certifications & Education</h2>
+
+<div class="grid">
+<div class="card cert" onclick="openModal('generative-ai-mastermind.pdf')">
+Generative AI
+</div>
+
+<div class="card cert" onclick="openModal('powerbi-workshop.pdf')">
+Power BI
+</div>
+
+<div class="card">
+BSc Computer Science<br>SV University
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <div class="container">
-<h2>Contact</h2>
+<h2><i class="fas fa-envelope"></i> Contact</h2>
+
 <form>
 <input placeholder="Name">
 <input placeholder="Email">
 <textarea placeholder="Message"></textarea>
 <button class="btn">Send</button>
 </form>
+
 </div>
 </section>
 
+<!-- Modal -->
+<div id="certModal">
+<span onclick="closeModal()">&times;</span>
+<iframe id="certFrame"></iframe>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
