@@ -5,67 +5,22 @@
   --primary:#2563eb;
 }
 
-/* Dark Mode */
 body.dark{
   --bg:#0f172a;
   --card:#1e293b;
   --text:white;
 }
 
-/* Base */
 body{
   margin:0;
-  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  font-family:Arial;
   background:var(--bg);
   color:var(--text);
   transition:.3s;
 }
 
-/* ===== LOADER ===== */
-#loader{
-  position:fixed;
-  inset:0;
-  background:black;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-  transition:.8s;
-}
+/* Header */
 
-.loader-logo{
-  color:white;
-  font-size:28px;
-  letter-spacing:2px;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 1s forwards;
-}
-
-#loader.hide{
-  opacity:0;
-  visibility:hidden;
-}
-
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:none;
-  }
-}
-
-/* ===== PROGRESS BAR ===== */
-#progressBar{
-  position:fixed;
-  top:0;
-  left:0;
-  height:3px;
-  width:0%;
-  background:var(--primary);
-  z-index:9999;
-}
-
-/* ===== HEADER ===== */
 header{
   background:var(--primary);
   color:white;
@@ -84,7 +39,6 @@ header{
   cursor:pointer;
 }
 
-/* ===== LAYOUT ===== */
 .container{
   max-width:900px;
   margin:auto;
@@ -95,20 +49,15 @@ header{
   background:var(--bg);
 }
 
-/* ===== PROFILE ===== */
 .profile{
   width:140px;
   height:140px;
   border-radius:50%;
   object-fit:cover;
-  transition:1s ease;
 }
 
-.profile:hover{
-  transform:scale(1.05);
-}
+/* Hero Summary */
 
-/* ===== SUMMARY ===== */
 .summary-box{
   max-width:600px;
   margin:15px auto 0;
@@ -118,7 +67,8 @@ header{
   font-size:14px;
 }
 
-/* ===== BUTTONS ===== */
+/* Buttons */
+
 .btn{
   background:var(--primary);
   color:white;
@@ -126,12 +76,6 @@ header{
   border-radius:20px;
   border:none;
   text-decoration:none;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 15px rgba(37,99,235,.5);
 }
 
 .btn.outline{
@@ -143,22 +87,18 @@ header{
   margin-top:15px;
 }
 
-/* ===== CARDS ===== */
+/* Cards */
+
 .card{
   background:var(--card);
   padding:20px;
-  border-radius:16px;
+  border-radius:12px;
   margin:15px 0;
   box-shadow:0 5px 15px rgba(0,0,0,.08);
-  transition:.4s ease;
 }
 
-.card:hover{
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
+/* Tags */
 
-/* ===== TAGS ===== */
 .tags span{
   background:var(--primary);
   color:white;
@@ -169,13 +109,15 @@ header{
   display:inline-block;
 }
 
-/* ===== AWARD ===== */
+/* Award */
+
 .award{
   color:#b45309;
   font-weight:600;
 }
 
-/* ===== DURATION ===== */
+/* Duration */
+
 .duration{
   background:#16a34a;
   color:white;
@@ -185,14 +127,16 @@ header{
   margin-left:6px;
 }
 
-/* ===== GRID ===== */
+/* Grid */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:15px;
 }
 
-/* ===== STUDY ===== */
+/* Studies */
+
 .study{
   display:flex;
   gap:15px;
@@ -203,7 +147,8 @@ header{
   width:70px;
 }
 
-/* ===== FORM ===== */
+/* Forms */
+
 input,textarea{
   width:100%;
   padding:10px;
@@ -212,7 +157,8 @@ input,textarea{
   border:1px solid #ccc;
 }
 
-/* ===== CONTACT ===== */
+/* Contact */
+
 .contact-links{
   margin-top:15px;
   font-size:26px;
@@ -223,7 +169,8 @@ input,textarea{
   color:var(--primary);
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
+
 footer{
   text-align:center;
   padding:20px;
@@ -231,7 +178,8 @@ footer{
   color:white;
 }
 
-/* ===== WHATSAPP FLOAT ===== */
+/* WhatsApp */
+
 .whatsapp-float{
   position:fixed;
   bottom:20px;
@@ -243,7 +191,8 @@ footer{
   font-size:22px;
 }
 
-/* ===== TIMELINE ===== */
+/* Timeline */
+
 .timeline{
   position:relative;
   margin-top:30px;
@@ -274,7 +223,8 @@ footer{
   font-size:14px;
 }
 
-/* ===== LOGO BADGE ===== */
+/* Square Logo Badges */
+
 .timeline-dot{
   width:44px;
   height:44px;
@@ -283,9 +233,8 @@ footer{
   align-items:center;
   justify-content:center;
   margin-top:4px;
+  position:relative;
   border:2px solid white;
-  background:white;
-  transition:.3s;
 }
 
 .timeline-dot img{
@@ -294,19 +243,34 @@ footer{
   object-fit:contain;
 }
 
-.timeline-item:hover .timeline-dot{
-  transform:scale(1.1);
+/* Company Colors */
+
+.soch-icon{
+  background:#2563eb;
 }
 
-/* ===== COMPANY COLORS ===== */
-.soch-icon{ background:#2563eb; }
-.md-icon{ background:#16a34a; }
+.md-icon{
+  background:#16a34a;
+}
 
-/* ===== REVEAL ANIMATION ===== */
+/* Pulse Animation */
+
+.timeline-item.show .timeline-dot{
+  animation:pulse 1.2s ease-out;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}
+  70%{box-shadow:0 0 0 12px rgba(37,99,235,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}
+}
+
+/* Scroll Reveal */
+
 .reveal{
   opacity:0;
-  transform:translateY(40px) scale(.96);
-  transition:all .8s cubic-bezier(0.22,1,0.36,1);
+  transform:translateY(40px);
+  transition:.6s;
 }
 
 .reveal.show{
@@ -314,34 +278,8 @@ footer{
   transform:none;
 }
 
-/* ===== MODAL ===== */
-#certModal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.8);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
+/* Mobile */
 
-#certModal iframe{
-  width:80%;
-  height:80%;
-  border:none;
-  border-radius:12px;
-}
-
-#certModal span{
-  position:absolute;
-  top:20px;
-  right:30px;
-  font-size:30px;
-  color:white;
-  cursor:pointer;
-}
-
-/* ===== MOBILE ===== */
 @media(max-width:700px){
   .timeline{
     padding-left:0;
