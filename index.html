@@ -3,186 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sasi Kumar M | Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
 </head>
 
 <body>
+
+<!-- Loader -->
+<div id="loader">
+  <h1 class="loader-logo">Sasi Kumar</h1>
+</div>
+
+<!-- Progress Bar -->
+<div id="progressBar"></div>
 
 <header>
 <div class="container hero">
 
 <button id="themeToggle">🌙</button>
 
-<img src="assets/profile.jpg" class="profile">
+<img src="assets/profile.jpg" class="profile parallax" data-speed="0.2">
 
 <h1>Sasi Kumar M</h1>
 <h3>Retail IT & Automation | Python | SQL | Power BI</h3>
 
 <div class="summary-box">
-Retail IT & Automation professional with 10+ years of experience in MIS, warehouse systems, Python automation and Power BI dashboards. Proven impact in cost reduction, accuracy improvement, and workflow optimization.
+Retail IT & Automation professional with 10+ years of experience in MIS, automation and dashboards.
 </div>
 
 <div class="hero-actions">
 <a href="#contact" class="btn">Contact Me</a>
-<a href="https://www.linkedin.com/in/sasi-kumar-m-skr0107" target="_blank" class="btn outline">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
+<a href="#" class="btn outline">Download Resume</a>
 </div>
 
 </div>
 </header>
 
-<section class="container reveal">
+<section>
+<div class="container">
 <h2>About Me</h2>
-<p>
-Retail IT professional specializing in Python automation, SQL-based MIS systems and Power BI dashboards.
-Experienced in warehouse automation, reporting, and operational optimization.
-</p>
-</section>
-
-<!-- EXPERIENCE -->
-
-<section class="container gray">
-<h2>Work Experience</h2>
-
-<div class="timeline">
-
-<!-- SOCH -->
-<div class="timeline-item reveal">
-
-<div class="timeline-date">2017 – Present</div>
-
-<div class="timeline-dot soch-icon">
-<img src="assets/soch-logo.png">
-</div>
-
-<div class="timeline-card card">
-
-<h3>Soch Apparels Pvt Ltd <span class="duration">6+ Years</span></h3>
-<p><b>Senior Executive – Information Technology</b> (Mar 2024 – Present)</p>
-<p><b>Senior Executive – MIS</b> (Sep 2017 – Feb 2024)</p>
-
-<div class="tags">
-<span>Python</span><span>SQL</span><span>Automation</span><span>Power BI</span>
-</div>
-
-<p class="award">🏆 Best Team Player – MIS (Feb 2024)</p>
-
-<ul>
-<li>Warehouse automation improving accuracy by ~20%</li>
-<li>Reduced inventory holding costs by ~25%</li>
-<li>Built PRN barcode automation</li>
-<li>Designed KPI dashboards</li>
-</ul>
-
-</div>
-</div>
-
-<!-- MD RETAIL -->
-
-<div class="timeline-item reveal">
-
-<div class="timeline-date">2013 – 2017</div>
-
-<div class="timeline-dot md-icon">
-<img src="assets/mdretail-logo.png">
-</div>
-
-<div class="timeline-card card">
-
-<h3>MD Retail India Pvt Ltd <span class="duration">4 Years</span></h3>
-<p><b>Executive – Supply Chain</b> (Oct 2013 – Aug 2017)</p>
-
-<div class="tags">
-<span>Supply Chain</span><span>MIS</span><span>Inventory</span>
-</div>
-
-<ul>
-<li>Inventory planning & logistics reporting</li>
-<li>Operational process improvement</li>
-</ul>
-
-</div>
-</div>
-
+<p>Retail IT professional specializing in automation & analytics.</p>
 </div>
 </section>
 
-<!-- PROJECTS -->
-
-<section class="container reveal">
-<h2>Automation Projects</h2>
-
+<section>
+<div class="container">
+<h2>Projects</h2>
 <div class="grid">
-<div class="card">📦 WMS Picklist Validation</div>
-<div class="card">🏷 Promo Update Automation</div>
-<div class="card">🖨 Barcode Printing (PRN)</div>
-<div class="card">📧 RTW Email Automation</div>
+<div class="card">WMS Automation</div>
+<div class="card">Barcode System</div>
+<div class="card">Email Automation</div>
 </div>
-
+</div>
 </section>
 
-<!-- CERTIFICATIONS -->
-
-<section class="container gray reveal">
-<h2>Certifications</h2>
-
-<div class="grid">
-<a class="card cert" href="generative-ai-mastermind.pdf" target="_blank">📜 Generative AI Mastermind</a>
-<a class="card cert" href="powerbi-workshop.pdf" target="_blank">📊 Power BI Workshop</a>
-</div>
-
-</section>
-
-<!-- STUDIES -->
-
-<section class="container reveal">
-<h2>Studies</h2>
-
-<div class="card study">
-<img src="assets/svu-logo.png">
-<div>
-<h3>Sri Venkateshwara University, Tirupati</h3>
-<p>BSc Computer Science – 2013</p>
-</div>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="container reveal">
+<section id="contact">
+<div class="container">
 <h2>Contact</h2>
-
-<form id="contactForm">
-<input id="name" placeholder="Your Name" required>
-<input id="email" placeholder="Your Email" required>
-<input id="phone" placeholder="Phone Number" required>
-<textarea id="message" placeholder="Message"></textarea>
-
-<button class="btn">Send Message</button>
+<form>
+<input placeholder="Name">
+<input placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button class="btn">Send</button>
 </form>
-
-<div class="contact-links">
-<a href="mailto:sasikumar0107@gmail.com"><i class="fas fa-envelope"></i></a>
-<a href="https://wa.me/919164657851" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="https://www.linkedin.com/in/sasi-kumar-m-skr0107" target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
-
 </section>
-
-<footer>
-© 2026 Sasi Kumar M
-</footer>
-
-<a href="https://wa.me/919164657851" class="whatsapp-float" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
 
 <script src="script.js"></script>
 </body>
 </html>
-
