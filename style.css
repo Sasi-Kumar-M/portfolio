@@ -1,304 +1,129 @@
+html{scroll-behavior:smooth;}
+
 :root{
-  --bg:#f5f7fb;
-  --card:white;
-  --text:#222;
-  --primary:#2563eb;
+--bg:#f5f7fb;
+--card:white;
+--text:#222;
+--primary:#2563eb;
 }
 
 body.dark{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:white;
+--bg:#0f172a;
+--card:#1e293b;
+--text:white;
 }
 
 body{
-  margin:0;
-  font-family:Arial;
-  background:var(--bg);
-  color:var(--text);
-  transition:.3s;
+margin:0;
+font-family:Arial;
+background:var(--bg);
+color:var(--text);
+padding-top:70px;   /* fixes overlap */
 }
 
-/* Header */
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:var(--card);
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+margin:0;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+width:0;
+height:2px;
+bottom:-4px;
+left:0;
+background:var(--primary);
+transition:.3s;
+}
+
+.nav-links a:hover::after{width:100%}
+
+/* HERO */
 
 header{
-  background:var(--primary);
-  color:white;
-  padding:60px 20px;
-  text-align:center;
+background:var(--primary);
+color:white;
+padding:80px 20px;
+text-align:center;
 }
 
-#themeToggle{
-  position:absolute;
-  top:20px;
-  right:20px;
-  background:white;
-  border:none;
-  padding:8px;
-  border-radius:50%;
-  cursor:pointer;
-}
-
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-.gray{
-  background:var(--bg);
-}
-
-.profile{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  object-fit:cover;
-}
-
-/* Hero Summary */
+.profile{width:140px;border-radius:50%}
 
 .summary-box{
-  max-width:600px;
-  margin:15px auto 0;
-  background:rgba(255,255,255,.15);
-  padding:12px 18px;
-  border-radius:10px;
-  font-size:14px;
+margin:15px auto;
+max-width:600px;
+background:rgba(255,255,255,.2);
+padding:10px;
+border-radius:10px;
 }
 
-/* Buttons */
+/* GENERAL */
 
-.btn{
-  background:var(--primary);
-  color:white;
-  padding:10px 20px;
-  border-radius:20px;
-  border:none;
-  text-decoration:none;
-}
+.container{max-width:900px;margin:auto;padding:40px 20px}
+.card{background:var(--card);padding:20px;border-radius:12px;margin:15px 0}
 
-.btn.outline{
-  background:none;
-  border:1px solid white;
-}
+.tags span{background:var(--primary);color:white;padding:5px 10px;border-radius:12px;margin:3px}
 
-.hero-actions{
-  margin-top:15px;
-}
+.duration{background:green;color:white;padding:4px 10px;border-radius:20px;font-size:12px}
 
-/* Cards */
+/* TIMELINE */
 
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:12px;
-  margin:15px 0;
-  box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-/* Tags */
-
-.tags span{
-  background:var(--primary);
-  color:white;
-  padding:4px 10px;
-  border-radius:12px;
-  font-size:12px;
-  margin:3px;
-  display:inline-block;
-}
-
-/* Award */
-
-.award{
-  color:#b45309;
-  font-weight:600;
-}
-
-/* Duration */
-
-.duration{
-  background:#16a34a;
-  color:white;
-  padding:4px 10px;
-  border-radius:999px;
-  font-size:12px;
-  margin-left:6px;
-}
-
-/* Grid */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-}
-
-/* Studies */
-
-.study{
-  display:flex;
-  gap:15px;
-  align-items:center;
-}
-
-.study img{
-  width:70px;
-}
-
-/* Forms */
-
-input,textarea{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-
-/* Contact */
-
-.contact-links{
-  margin-top:15px;
-  font-size:26px;
-}
-
-.contact-links a{
-  margin-right:15px;
-  color:var(--primary);
-}
-
-/* Footer */
-
-footer{
-  text-align:center;
-  padding:20px;
-  background:var(--primary);
-  color:white;
-}
-
-/* WhatsApp */
-
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:22px;
-}
-
-/* Timeline */
-
-.timeline{
-  position:relative;
-  margin-top:30px;
-  padding-left:40px;
-}
-
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:120px;
-  top:0;
-  bottom:0;
-  width:2px;
-  background:var(--primary);
-}
-
-.timeline-item{
-  display:grid;
-  grid-template-columns:100px 40px 1fr;
-  gap:10px;
-  margin-bottom:30px;
-  align-items:flex-start;
-}
-
-.timeline-date{
-  font-weight:600;
-  color:var(--primary);
-  font-size:14px;
-}
-
-/* Square Logo Badges */
+.timeline{border-left:2px solid var(--primary);padding-left:20px}
 
 .timeline-dot{
-  width:44px;
-  height:44px;
-  border-radius:8px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-top:4px;
-  position:relative;
-  border:2px solid white;
+width:44px;height:44px;border-radius:8px;
+display:flex;align-items:center;justify-content:center;
 }
 
-.timeline-dot img{
-  width:32px;
-  height:32px;
-  object-fit:contain;
+.timeline-dot img{width:30px}
+
+/* GRID */
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+
+/* CONTACT */
+
+.contact-links a{font-size:25px;margin-right:15px}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+position:fixed;bottom:20px;right:20px;
+background:#25d366;color:white;padding:15px;border-radius:50%;
 }
 
-/* Company Colors */
-
-.soch-icon{
-  background:#2563eb;
-}
-
-.md-icon{
-  background:#16a34a;
-}
-
-/* Pulse Animation */
-
-.timeline-item.show .timeline-dot{
-  animation:pulse 1.2s ease-out;
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}
-  70%{box-shadow:0 0 0 12px rgba(37,99,235,0)}
-  100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}
-}
-
-/* Scroll Reveal */
-
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:.6s;
-}
-
-.reveal.show{
-  opacity:1;
-  transform:none;
-}
-
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:700px){
-  .timeline{
-    padding-left:0;
-  }
-
-  .timeline::before{
-    left:8px;
-  }
-
-  .timeline-item{
-    grid-template-columns:20px 1fr;
-  }
-
-  .timeline-date{
-    grid-column:2;
-    margin-bottom:6px;
-  }
-
-  .timeline-dot{
-    grid-row:1/span 2;
-  }
+.nav-links{flex-wrap:wrap;justify-content:center}
 }
